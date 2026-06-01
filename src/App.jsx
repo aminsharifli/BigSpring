@@ -1,16 +1,11 @@
 import React from 'react'
-import Header from './Header';
-import Orta from './Orta';
-import Footer from './Footer';
+import { Route, Routes } from 'react-router';
+import Router from './components/Router/Router';
 
 function App() {
   return (
     <>
-      <div className="min-h-screen bg-white font-sans antialiased">
-          <Header/>
-          <Orta/>
-          <Footer/>
-      </div>
+      <Router/>
     </>
   )
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 function Header() {
   return (
@@ -10,11 +11,11 @@ function Header() {
               </div>
 
               <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-                <a href="#home" className="text-[#00a896] transition-colors">Home</a>
-                <a href="#blog" className="hover:text-[#00a896] transition-colors">Blog</a>
-                <a href="#pricing" className="hover:text-[#00a896] transition-colors">Pricing</a>
-                <a href="#contact" className="hover:text-[#00a896] transition-colors">Contact</a>
-                <a href="#faq" className="hover:text-[#00a896] transition-colors">FAQ</a>
+                <Link to={'/'} className="hover:text-[#00a896] transition-colors">Home</Link>
+                <Link to={'/blog'} className="hover:text-[#00a896] transition-colors">Blog</Link>
+                <Link to={'/pricing'} className="hover:text-[#00a896] transition-colors">Pricing</Link>
+                <Link to={'/contact'} className="hover:text-[#00a896] transition-colors">Contact</Link>
+                <Link to={'/faq'} className="hover:text-[#00a896] transition-colors">FAQ</Link>
               </div>
 
               <div>
