@@ -7,7 +7,7 @@ function Header() {
       <header className="mx-auto max-w-7xl px-6 py-6 md:px-12">
           <nav className="flex items-center justify-between">
               <div className="flex items-center">
-                <img src="https://themewagon.github.io/bigspring/images/logo.png" alt="Bigspring Logo" className="h-10 w-auto object-contain"/>
+                <Link to={'/'} ><img src="https://themewagon.github.io/bigspring/images/logo.png" alt="Bigspring Logo" className="h-10 w-auto object-contain"/></Link>
               </div>
 
               <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
