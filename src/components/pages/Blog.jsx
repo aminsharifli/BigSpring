@@ -1,6 +1,26 @@
 import React from 'react'
 
 function Blog() {
+    const blogs = [
+        {
+            id: 1,
+            title: "How to make toys from old Olarpaper",
+            image: "https://themewagon.github.io/bigspring/images/blog-4.jpg",
+            alt: "News 1"
+        },
+        {
+            id: 2,
+            title: "What you need to know about Photography",
+            image: "https://themewagon.github.io/bigspring/images/blog-3.jpg",
+            alt: "News 2"
+        },
+        {
+            id: 3,
+            title: "How to make toys from old Olarpaper",
+            image: "https://themewagon.github.io/bigspring/images/blog-2.jpg",
+            alt: "News 3"
+        }
+    ];
   return (
     <>
         <div className="w-full bg-white pt-12 pb-20 px-6 font-sans">
@@ -23,30 +43,15 @@ function Blog() {
                 </section>
 
                 <section className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full pt-4">
-
-                    <div className="flex flex-col space-y-3 text-left">
-                        <img src="https://themewagon.github.io/bigspring/images/blog-4.jpg" alt="News 1" className="w-full h-40 object-cover rounded-xl select-none"/>
-                        <h3 className="text-base md:text-lg font-bold text-slate-800 leading-snug">How to make toys from old Olarpaper</h3>
-                        <div>
-                            <button className="bg-[#00a896] text-white px-4 py-1.5 rounded-full font-medium text-[11px] hover:bg-[#009484] transition duration-200">Read More</button>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col space-y-3 text-left">
-                        <img src="https://themewagon.github.io/bigspring/images/blog-3.jpg" alt="News 2" className="w-full h-40 object-cover rounded-xl select-none"/>
-                        <h3 className="text-base md:text-lg font-bold text-slate-800 leading-snug">What you need to know about Photography</h3>
-                        <div>
-                            <button className="bg-[#00a896] text-white px-4 py-1.5 rounded-full font-medium text-[11px] hover:bg-[#009484] transition duration-200">Read More</button>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col space-y-3 text-left">
-                        <img src="https://themewagon.github.io/bigspring/images/blog-2.jpg" alt="News 3" className="w-full h-40 object-cover rounded-xl select-none"/>
-                        <h3 className="text-base md:text-lg font-bold text-slate-800 leading-snug">How to make toys from old Olarpaper</h3>
-                        <div>
-                            <button className="bg-[#00a896] text-white px-4 py-1.5 rounded-full font-medium text-[11px] hover:bg-[#009484] transition duration-200">Read More</button>
-                        </div>
-                    </div>
+                    {blogs.map(item => (
+                                <div key={item.id} className="flex flex-col space-y-3 text-left">
+                                    <img src={item.image} alt="News 1" className="w-full h-40 object-cover rounded-xl select-none"/>
+                                    <h3 className="text-base md:text-lg font-bold text-slate-800 leading-snug">{item.title}</h3>
+                                    <div>
+                                        <button className="bg-[#00a896] text-white px-4 py-1.5 rounded-full font-medium text-[11px] hover:bg-[#009484] transition duration-200">Read More</button>
+                                    </div>
+                                </div>
+                    ))}
                 </section>
 
                 <div className="flex justify-center items-center gap-1 pt-6 select-none">
